@@ -363,7 +363,7 @@ var WidgetAnnotation = (function WidgetAnnotationClosure() {
 //END:MQZ. Sep.19.2012. comment out the fullname routin, replace it with getInheritableProperty('T') //PDF Spec P.689
 //It matches a sequence of at least one period or space, which is then replaced by a single underscore
       var itemNameStr = stringToPDFString(Util.getInheritableProperty(dict, 'T') || '');
-      itemNameStr = itemNameStr.replace(/[.\s\W]+/g, '_'); //replace spaces and non-word character (not [^a-zA-Z0-9_]) with _
+      //itemNameStr = itemNameStr.replace(/[.\s\W]+/g, '_'); //replace spaces and non-word character (not [^a-zA-Z0-9_]) with _
       data.fullName = itemNameStr.replace(/^[\s_,:.;\/\\]+/, ''); //replace starting punctuation
 
       PDFAnno.processAnnotation(dict, data);
